@@ -20,5 +20,11 @@ pipeline {
         		sh "mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml test"
         	}
         }
+        stage('BuildAndroid') {
+        	steps {
+                dir('MyAndroidApplication')
+        		sh './gradlwe :app:build'
+        	}
+        }
     }
 }
