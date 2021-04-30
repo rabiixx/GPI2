@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	dir('MyArduinoProject/src/BlinkProject && make') {
+            	dir('MyArduinoProject/src/BlinkProject') {
                 	sh 'make'
             	}
             }
