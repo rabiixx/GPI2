@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
             	dir('/home/kali/rabiixx/GPI2/MyArduinoProject/src/BlinkProject') {
-                	sh 'echo hola'
+                	sh 'echo "hola"'
             	}
             }
         }
