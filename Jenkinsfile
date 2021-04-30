@@ -11,7 +11,7 @@ pipeline {
         }
         stage('ValidateCode') {
         	steps {
-        		sh 'mvn site'
+        		sh 'mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml site'
         	}
         }
         stage('Test') {
