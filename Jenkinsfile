@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
         	steps {
-        		sh "sudo mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml test"
+        		sh "mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml test"
         	}
         }
     }
