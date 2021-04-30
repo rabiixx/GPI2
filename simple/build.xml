@@ -1,0 +1,25 @@
+<project>
+
+    <target name="clean">
+        <delete dir="target/build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="target/build/classes"/>
+        <javac srcdir="src/main" destdir="target/build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="target/build/jar"/>
+        <jar destfile="target/build/jar/App.jar" basedir="target/build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="gpi2.App"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="target/build/jar/App.jar" fork="true"/>
+    </target>
+
+</project>
