@@ -9,9 +9,14 @@ pipeline {
             	sh 'make -C /home/kali/rabiixx/GPI2/MyArduinoProject/src/BlinkProject'
             }
         }
+        stage('ValidateCode') {
+        	steps {
+        		sh 'mvn site'
+        	}
+        }
         stage('Test') {
         	steps {
-        		sh 'mvn package'
+        		sh 'mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml package'
         		sh "mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml test"
         	}
         }
