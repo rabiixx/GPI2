@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	dir('/home/kali/rabiixx/GPI2/MyArduinoProject/src/BlinkProject') {
-                	sh "make"
-            	}
+            	sh 'make -C MyArduinoProject/src/BlinkProject'
             }
         }
     }
