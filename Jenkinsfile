@@ -11,7 +11,6 @@ pipeline {
         }
         stage('Test') {
         	steps {
-        		sh 'mvn package'
         		sh "mvn -f /home/kali/rabiixx/GPI2/simple/pom.xml test"
         	}
         }
