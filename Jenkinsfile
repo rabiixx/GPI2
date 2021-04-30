@@ -22,8 +22,9 @@ pipeline {
         }
         stage('BuildAndroid') {
         	steps {
-                dir('MyAndroidApplication')
-        		sh './gradlwe :app:build'
+                dir('MyAndroidApplication'){
+        		  sh './gradlwe :app:build'
+                }
         	}
         }
     }
