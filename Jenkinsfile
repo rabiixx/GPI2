@@ -8,9 +8,7 @@ pipeline {
         }
         stage('Test') {
         	steps {
-        		dir('/home/kali/rabiixx/GPI2/simple') {
-        			sh 'mvn test'
-        		}
+        		sh 'mvn -f /home/kali/rabiixx/simple/pom.xml test'
         	}
         }
     }
